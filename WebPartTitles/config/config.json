@@ -9,11 +9,29 @@
           "manifest": "./src/webparts/editableTitle/EditableTitleWebPart.manifest.json"
         }
       ]
+    },
+    "placeholder-title-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/placeholderTitle/PlaceholderTitleWebPart.js",
+          "manifest": "./src/webparts/placeholderTitle/PlaceholderTitleWebPart.manifest.json"
+        }
+      ]
+    },
+    "web-part-description-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/webPartDescription/WebPartDescriptionWebPart.js",
+          "manifest": "./src/webparts/webPartDescription/WebPartDescriptionWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "EditableTitleWebPartStrings": "lib/webparts/editableTitle/loc/{locale}.js",
-    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PlaceholderTitleWebPartStrings": "lib/webparts/placeholderTitle/loc/{locale}.js",
+    "WebPartDescriptionWebPartStrings": "lib/webparts/webPartDescription/loc/{locale}.js"
   }
 }

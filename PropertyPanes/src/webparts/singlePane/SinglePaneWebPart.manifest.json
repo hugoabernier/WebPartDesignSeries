@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "74299444-3d61-4ef6-8689-c6aac4ed0db5",
+  "alias": "SinglePaneWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "Single Pane" },
+    "description": { "default": "Displays a single pane property pane" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "SinglePane"
+    }
+  }]
+}

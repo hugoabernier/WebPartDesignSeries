@@ -3,8 +3,8 @@
     "isCreatingSolution": false,
     "environment": "spo",
     "version": "1.8.2",
-    "libraryName": "web-part-titles",
-    "libraryId": "969f67cc-c64a-4896-aabb-f93a5659b9c7",
+    "libraryName": "web-part-property-panes",
+    "libraryId": "943d74b4-3c40-4128-8272-8beef057ae7f",
     "packageManager": "npm",
     "isDomainIsolated": false,
     "componentType": "webpart"

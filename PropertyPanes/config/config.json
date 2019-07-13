@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "single-pane-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/singlePane/SinglePaneWebPart.js",
+          "manifest": "./src/webparts/singlePane/SinglePaneWebPart.manifest.json"
+        }
+      ]
+    },
+    "accordion-pane-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/accordionPane/AccordionPaneWebPart.js",
+          "manifest": "./src/webparts/accordionPane/AccordionPaneWebPart.manifest.json"
+        }
+      ]
+    },
+    "steps-pane-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/stepsPane/StepsPaneWebPart.js",
+          "manifest": "./src/webparts/stepsPane/StepsPaneWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SinglePaneWebPartStrings": "lib/webparts/singlePane/loc/{locale}.js",
+    "AccordionPaneWebPartStrings": "lib/webparts/accordionPane/loc/{locale}.js",
+    "StepsPaneWebPartStrings": "lib/webparts/stepsPane/loc/{locale}.js"
+  }
+}
