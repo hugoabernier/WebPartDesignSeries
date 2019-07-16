@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg4"
+   xml:space="preserve"
+   viewBox="0 0 32 32"
+   version="1.1"
+   style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
+   height="100%"
+   width="100%"><metadata
+   id="metadata10"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs8" />
+    <path
+   id="path2"
+   style="fill-rule:nonzero;fill:#333333"
+   d="M32,22L32,30L14,30L14,22L32,22ZM12,30L0,30L0,22L12,22L12,30ZM32,20L20,20L20,12L32,12L32,20ZM18,20L10,20L10,12L18,12L18,20ZM8,20L0,20L0,12L8,12L8,20ZM32,10L18,10L18,2L32,2L32,10ZM16,10L0,10L0,2L16,2L16,10ZM16,24L16,28L30,28L30,24L16,24ZM2,24L2,28L10,28L10,24L2,24ZM22,14L22,18L30,18L30,14L22,14ZM12,14L12,18L16,18L16,14L12,14ZM2,14L2,18L6,18L6,14L2,14ZM20,4L20,8L30,8L30,4L20,4ZM2,4L2,8L14,8L14,4L2,4Z" />
+</svg>

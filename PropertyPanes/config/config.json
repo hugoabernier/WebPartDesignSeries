@@ -25,12 +25,57 @@
           "manifest": "./src/webparts/stepsPane/StepsPaneWebPart.manifest.json"
         }
       ]
+    },
+    "non-reactive-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/nonReactive/NonReactiveWebPart.js",
+          "manifest": "./src/webparts/nonReactive/NonReactiveWebPart.manifest.json"
+        }
+      ]
+    },
+    "loading-indicator-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/loadingIndicator/LoadingIndicatorWebPart.js",
+          "manifest": "./src/webparts/loadingIndicator/LoadingIndicatorWebPart.manifest.json"
+        }
+      ]
+    },
+    "choice-group-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/choiceGroup/ChoiceGroupWebPart.js",
+          "manifest": "./src/webparts/choiceGroup/ChoiceGroupWebPart.manifest.json"
+        }
+      ]
+    },
+    "conditional-field-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/conditionalField/ConditionalFieldWebPart.js",
+          "manifest": "./src/webparts/conditionalField/ConditionalFieldWebPart.manifest.json"
+        }
+      ]
+    },
+    "conditional-group-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/conditionalGroup/ConditionalGroupWebPart.js",
+          "manifest": "./src/webparts/conditionalGroup/ConditionalGroupWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "SinglePaneWebPartStrings": "lib/webparts/singlePane/loc/{locale}.js",
     "AccordionPaneWebPartStrings": "lib/webparts/accordionPane/loc/{locale}.js",
-    "StepsPaneWebPartStrings": "lib/webparts/stepsPane/loc/{locale}.js"
+    "StepsPaneWebPartStrings": "lib/webparts/stepsPane/loc/{locale}.js",
+    "NonReactiveWebPartStrings": "lib/webparts/nonReactive/loc/{locale}.js",
+    "LoadingIndicatorWebPartStrings": "lib/webparts/loadingIndicator/loc/{locale}.js",
+    "ChoiceGroupWebPartStrings": "lib/webparts/choiceGroup/loc/{locale}.js",
+    "ConditionalFieldWebPartStrings": "lib/webparts/conditionalField/loc/{locale}.js",
+    "ConditionalGroupWebPartStrings": "lib/webparts/conditionalGroup/loc/{locale}.js"
   }
 }
