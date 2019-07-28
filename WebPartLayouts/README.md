@@ -1,26 +1,56 @@
-## web-part-layouts
+# WebPartLayouts
 
-This is where you include your WebPart documentation.
+## Summary
 
-### Building the code
+Shows how to use the various web part layouts.
 
-```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
-```
+### Grid Control
 
-This package produces the following:
+![Grid Control Sample](./assets/CustomGridControl.gif)
 
-* lib/* - intermediate-stage commonjs build artifacts
-* dist/* - the bundled script, along with other resources
-* deploy/* - all resources which should be uploaded to a CDN.
+![Out-of-the-box vs. Custome](./assets/image-1564342248026.png)
 
-### Build options
+## Used SharePoint Framework Version
 
-gulp clean - TODO
-gulp test - TODO
-gulp serve - TODO
-gulp bundle - TODO
-gulp package-solution - TODO
+![SPFx v1.8.2](https://img.shields.io/badge/SPFx-1.8.2-green.svg)
+
+## Applies to
+
+* [SharePoint Framework](https:/dev.office.com/sharepoint)
+* [Office 365 tenant](https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment)
+
+## Prerequisites
+
+There are no pre-requisites
+
+## Solution
+
+Solution|Author(s)
+--------|---------
+WebPartLayouts | Hugo Bernier ([Tahoe Ninjas](http://tahoeninjas.blog), [@bernierh](https://www.twitter.com/bernierh))
+
+## Version history
+
+Version|Date|Comments
+-------|----|--------
+1.0|July 28, 2019|Initial release
+
+## Disclaimer
+
+**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+
+---
+
+## Minimal Path to Awesome
+
+* Clone this repository
+* in the command line run:
+  * `npm install`
+  * `gulp serve`
+
+
+## Features
+
+This solution contains the following features:
+
+* Grid Layout control
