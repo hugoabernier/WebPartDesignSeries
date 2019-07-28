@@ -1,0 +1,12 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": false,
+    "environment": "spo",
+    "version": "1.8.2",
+    "libraryName": "web-part-layouts",
+    "libraryId": "3a0b107e-af35-4d55-8a2e-61ae9dfaa21c",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

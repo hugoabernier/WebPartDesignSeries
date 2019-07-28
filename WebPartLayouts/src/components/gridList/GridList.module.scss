@@ -1,0 +1,21 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
+:export {
+  padding: 20;
+  minWidth: 249;
+  maxWidth: 320;
+  rowsPerPage: 3;
+}
+
+.gridList {
+  overflow: hidden;
+  font-size: 0;
+  position: relative;
+  background-color: transparent;
+
+  :global(.ms-List-cell) {
+    vertical-align: top;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}

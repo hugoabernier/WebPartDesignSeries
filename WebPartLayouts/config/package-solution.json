@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "web-part-layouts-client-side-solution",
+    "id": "3a0b107e-af35-4d55-8a2e-61ae9dfaa21c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/web-part-layouts.sppkg"
+  }
+}
