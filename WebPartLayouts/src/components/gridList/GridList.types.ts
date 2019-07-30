@@ -3,6 +3,11 @@ import { IListProps } from 'office-ui-fabric-react/lib/List';
 
 export interface IGridListProps {
   /**
+   * Accessible text for the grid layout
+   */
+  ariaLabel?: string;
+
+  /**
    * The array of items to display
    */
   items: any[];

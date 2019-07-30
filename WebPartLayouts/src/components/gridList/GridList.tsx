@@ -22,6 +22,7 @@ export class GridList extends React.Component<IGridListProps, IGridListState> {
 
   public render(): React.ReactElement<IGridListProps> {
     return (
+      <div role="group" aria-label={this.props.ariaLabel}>
       <FocusZone>
         <List
           role="presentation"
@@ -33,6 +34,7 @@ export class GridList extends React.Component<IGridListProps, IGridListState> {
           {...this.props.listProps}
         />
       </FocusZone>
+      </div>
     );
   }
 
