@@ -1,6 +1,6 @@
 import * as React from 'react';
-import styles from './GridLayout.module.scss';
-import { IGridLayoutProps, IGridLayoutState } from './IGridLayout.types';
+import styles from './Grid.module.scss';
+import { IGridProps, IGridState } from './IGrid.types';
 import { ISize } from 'office-ui-fabric-react/lib/Utilities';
 
 // Used to render document cards
@@ -16,11 +16,11 @@ import {
 } from 'office-ui-fabric-react/lib/DocumentCard';
 import { ImageFit } from 'office-ui-fabric-react/lib/Image';
 
-import { GridList } from '../../../components/gridList';
+import { GridLayout } from '../../../components/gridLayout/index';
 
 
-export default class GridLayout extends React.Component<IGridLayoutProps, IGridLayoutState> {
-  constructor(props: IGridLayoutProps) {
+export default class Grid extends React.Component<IGridProps, IGridState> {
+  constructor(props: IGridProps) {
     super(props);
 
     this.state = {
@@ -63,10 +63,10 @@ export default class GridLayout extends React.Component<IGridLayoutProps, IGridL
     };
   }
 
-  public render(): React.ReactElement<IGridLayoutProps> {
+  public render(): React.ReactElement<IGridProps> {
     return (
-      <div className={styles.gridLayout}>
-        <GridList
+      <div className={styles.grid}>
+        <GridLayout
           items={this.state.items}
           onRenderGridItem={(item: any, finalSize: ISize, isCompact: boolean) => this._onRenderGridItem(item, finalSize, isCompact)}
         />

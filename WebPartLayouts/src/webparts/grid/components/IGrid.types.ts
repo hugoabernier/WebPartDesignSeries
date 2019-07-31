@@ -1,8 +1,8 @@
-export interface IGridLayoutProps {
+export interface IGridProps {
 
 }
 
-export interface IGridLayoutState {
+export interface IGridState {
   items: IGridItem[];
 }
 

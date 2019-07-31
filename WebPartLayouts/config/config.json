@@ -2,19 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "carousel-layout-web-part": {
-      "components": [
-        {
-          "entrypoint": "./lib/webparts/carouselLayout/CarouselLayoutWebPart.js",
-          "manifest": "./src/webparts/carouselLayout/CarouselLayoutWebPart.manifest.json"
-        }
-      ]
-    },
     "grid-layout-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/gridLayout/GridLayoutWebPart.js",
-          "manifest": "./src/webparts/gridLayout/GridLayoutWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/grid/GridWebPart.js",
+          "manifest": "./src/webparts/grid/GridWebPart.manifest.json"
         }
       ]
     },
@@ -29,8 +21,7 @@
   },
   "externals": {},
   "localizedResources": {
-    "CarouselLayoutWebPartStrings": "lib/webparts/carouselLayout/loc/{locale}.js",
-    "GridLayoutWebPartStrings": "lib/webparts/gridLayout/loc/{locale}.js",
+    "GridWebPartStrings": "lib/webparts/grid/loc/{locale}.js",
     "FilmstripWebPartStrings": "lib/webparts/filmstrip/loc/{locale}.js"
   }
 }

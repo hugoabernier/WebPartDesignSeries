@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "851b9a1e-300e-44fd-b63e-ebe360938abb",
-  "alias": "GridLayoutWebPart",
+  "alias": "GridWebPart",
   "componentType": "WebPart",
 
   "version": "*",

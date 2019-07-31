@@ -1,7 +1,7 @@
 import {  ISize } from 'office-ui-fabric-react/lib/Utilities';
 import { IListProps } from 'office-ui-fabric-react/lib/List';
 
-export interface IGridListProps {
+export interface IGridLayoutProps {
   /**
    * Accessible text for the grid layout
    */
@@ -23,4 +23,4 @@ export interface IGridListProps {
   onRenderGridItem: (item: any, finalSize: ISize, isCompact: boolean) => JSX.Element;
 }
 
-export interface IGridListState {}
+export interface IGridLayoutState {}

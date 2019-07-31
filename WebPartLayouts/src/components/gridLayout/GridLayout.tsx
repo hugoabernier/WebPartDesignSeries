@@ -1,12 +1,12 @@
 import * as React from 'react';
-import styles from './GridList.module.scss';
+import styles from './GridLayout.module.scss';
 
 // Used to render list grid
 import { FocusZone } from 'office-ui-fabric-react/lib/FocusZone';
 import { List } from 'office-ui-fabric-react/lib/List';
 import { IRectangle, ISize } from 'office-ui-fabric-react/lib/Utilities';
 
-import { IGridListProps, IGridListState } from './GridList.types';
+import { IGridLayoutProps, IGridLayoutState } from './GridLayout.types';
 
 const ROWS_PER_PAGE: number = +styles.rowsPerPage;
 const MAX_ROW_HEIGHT: number = +styles.maxWidth;
@@ -14,19 +14,19 @@ const PADDING: number = +styles.padding;
 const MIN_WIDTH: number = +styles.minWidth;
 const COMPACT_THRESHOLD: number = +styles.compactThreshold;
 
-export class GridList extends React.Component<IGridListProps, IGridListState> {
+export class GridLayout extends React.Component<IGridLayoutProps, IGridLayoutState> {
   private _columnCount: number;
   private _columnWidth: number;
   private _rowHeight: number;
   private _isCompact: boolean;
 
-  public render(): React.ReactElement<IGridListProps> {
+  public render(): React.ReactElement<IGridLayoutProps> {
     return (
       <div role="group" aria-label={this.props.ariaLabel}>
       <FocusZone>
         <List
           role="presentation"
-          className={styles.gridList}
+          className={styles.gridLayout}
           items={this.props.items}
           getItemCountForPage={this._getItemCountForPage}
           getPageHeight={this._getPageHeight}
