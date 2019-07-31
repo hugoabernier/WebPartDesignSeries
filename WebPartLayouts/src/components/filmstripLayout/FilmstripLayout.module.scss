@@ -1,7 +1,6 @@
 // $white: '[theme:white,default:#ffffff]';
 // $black: '[theme:black,default:#000000]';
 @import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
-
 .filmstripLayout {
   position: relative;
 
@@ -25,7 +24,6 @@
       color: $ms-color-white;
     }
   }
-
 }
 
 .indexButtonContainer {
@@ -50,11 +48,11 @@
   line-height: 40px;
   box-sizing: content-box;
   background-color: $ms-color-black;
-  opacity: .6;
+  opacity: 0.6;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     color: $ms-color-white;
@@ -64,9 +62,6 @@
     outline: -webkit-focus-ring-color auto 1px;
   }
 }
-
-
-
 
 .indexButton:global(.ms-Button-flexContainer):hover:global(.ms-Icon),
 .indexButton:global(.ms-Icon:hover),

@@ -1,8 +1,12 @@
 import { css } from '@uifabric/utilities/lib/css';
 import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import * as React from 'react';
+import * as slick from 'slick-carousel';
 import Slider from 'react-slick';
 import { IFilmstripLayoutProps, IFilmstripLayoutState } from "./FilmstripLayout.types";
+
+
+import { SPComponentLoader } from '@microsoft/sp-loader';
 import styles from "./FilmstripLayout.module.scss";
 
 /**
@@ -16,6 +20,15 @@ export class FilmstripLayout extends React.Component<
   // the slick slider used in normal views
   private _slider: Slider;
 
+  /**
+   *
+   */
+  constructor(props: IFilmstripLayoutProps) {
+    super(props);
+
+    SPComponentLoader.loadCss('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+    SPComponentLoader.loadCss('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+  }
   /**
    * Renders a slick switch, a slide for each child, and next/previous arrows
    */
