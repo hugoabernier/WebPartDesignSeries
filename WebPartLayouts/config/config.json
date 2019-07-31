@@ -17,11 +17,20 @@
           "manifest": "./src/webparts/gridLayout/GridLayoutWebPart.manifest.json"
         }
       ]
+    },
+    "filmstrip-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/filmstrip/FilmstripWebPart.js",
+          "manifest": "./src/webparts/filmstrip/FilmstripWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "CarouselLayoutWebPartStrings": "lib/webparts/carouselLayout/loc/{locale}.js",
-    "GridLayoutWebPartStrings": "lib/webparts/gridLayout/loc/{locale}.js"
+    "GridLayoutWebPartStrings": "lib/webparts/gridLayout/loc/{locale}.js",
+    "FilmstripWebPartStrings": "lib/webparts/filmstrip/loc/{locale}.js"
   }
 }

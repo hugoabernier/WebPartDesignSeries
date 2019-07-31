@@ -1,7 +1,7 @@
 import * as React from 'react';
-import styles from './GridLayout.module.scss';
-import { IGridLayoutProps, IGridLayoutState } from './IGridLayout.types';
-import { ISize } from 'office-ui-fabric-react/lib/Utilities';
+import styles from './Filmstrip.module.scss';
+import { IFilmstripProps, IFilmstripState } from './IFilmstrip.types';
+import { FilmstripLayout } from '../../../components/filmstripLayout/index';
 
 // Used to render document cards
 import {
@@ -16,15 +16,13 @@ import {
 } from 'office-ui-fabric-react/lib/DocumentCard';
 import { ImageFit } from 'office-ui-fabric-react/lib/Image';
 
-import { GridList } from '../../../components/gridList';
 
-
-export default class GridLayout extends React.Component<IGridLayoutProps, IGridLayoutState> {
-  constructor(props: IGridLayoutProps) {
+export default class Filmstrip extends React.Component<IFilmstripProps, IFilmstripState> {
+  constructor(props: IFilmstripProps) {
     super(props);
 
     this.state = {
-      items:  [{
+      items: [{
         thumbnail: "https://lorempixel.com/400/200/technics/1/",
         title: "Adventures in SPFx",
         name: "Perry Losselyong",
@@ -63,52 +61,49 @@ export default class GridLayout extends React.Component<IGridLayoutProps, IGridL
     };
   }
 
-  public render(): React.ReactElement<IGridLayoutProps> {
+  public render(): React.ReactElement<IFilmstripProps> {
     return (
-      <div className={styles.gridLayout}>
-        <GridList
-          items={this.state.items}
-          onRenderGridItem={(item: any, finalSize: ISize, isCompact: boolean) => this._onRenderGridItem(item, finalSize, isCompact)}
-        />
+      <div className={styles.filmstrip}>
+        <FilmstripLayout>
+          {this.state.items.map((item: any, _index: number) => {
+            const previewProps: IDocumentCardPreviewProps = {
+              previewImages: [
+                {
+                  previewImageSrc: item.thumbnail,
+                  imageFit: ImageFit.cover,
+                  height: 130
+                }
+              ]
+            };
+
+            return <div
+              className={styles.documentTile}
+              data-is-focusable={true}
+              role="listitem"
+              aria-label={item.title}
+            >
+              <DocumentCard
+                type={DocumentCardType.normal}
+                onClick={(ev: React.SyntheticEvent<HTMLElement>) => alert(ev)}
+
+              >
+                <DocumentCardPreview {...previewProps} />
+                <DocumentCardLocation location={item.location} />
+                <DocumentCardDetails>
+                  <DocumentCardTitle
+                    title={item.title}
+                    shouldTruncate={true}
+                  />
+                  <DocumentCardActivity
+                    activity={item.activity}
+                    people={[{ name: item.name, profileImageSrc: item.profileImageSrc }]}
+                  />
+                </DocumentCardDetails>
+              </DocumentCard>
+            </div>;
+          })}
+        </FilmstripLayout>
       </div>
     );
-  }
-
-  private _onRenderGridItem = (item: any, finalSize: ISize, isCompact: boolean): JSX.Element => {
-    const previewProps: IDocumentCardPreviewProps = {
-      previewImages: [
-        {
-          previewImageSrc: item.thumbnail,
-          imageFit: ImageFit.cover,
-          height: 130
-        }
-      ]
-    };
-
-    return <div
-      className={styles.documentTile}
-      data-is-focusable={true}
-      role="listitem"
-      aria-label={item.title}
-    >
-      <DocumentCard
-        type={isCompact ? DocumentCardType.compact : DocumentCardType.normal}
-        onClick={(ev: React.SyntheticEvent<HTMLElement>) => alert(ev)}
-
-      >
-        <DocumentCardPreview {...previewProps} />
-        {!isCompact && <DocumentCardLocation location={item.location} />}
-        <DocumentCardDetails>
-          <DocumentCardTitle
-            title={item.title}
-            shouldTruncate={true}
-          />
-          <DocumentCardActivity
-            activity={item.activity}
-            people={[{ name: item.name, profileImageSrc: item.profileImageSrc }]}
-          />
-        </DocumentCardDetails>
-      </DocumentCard>
-    </div>;
   }
 }

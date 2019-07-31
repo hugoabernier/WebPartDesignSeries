@@ -22,7 +22,9 @@
     "@types/webpack-env": "1.13.1",
     "office-ui-fabric-react": "6.143.0",
     "react": "16.7.0",
-    "react-dom": "16.7.0"
+    "react-dom": "16.7.0",
+    "react-slick": "^0.24.0",
+    "slick-carousel": "^1.8.1"
   },
   "resolutions": {
     "@types/react": "16.7.22"
