@@ -53,20 +53,26 @@ export class FilmstripLayout extends React.Component<
       respondTo: "slider",
       responsive: [
         {
-          breakpoint: 2560,
+          breakpoint: 964,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3
           }
         },
         {
-          breakpoint: 801,
+          breakpoint: 889,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2
           }
+        },
+        {
+          breakpoint: 625,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-        // there is no 1 slide option, as it converts to narrow view
       ]
     };
 
