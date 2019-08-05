@@ -64,7 +64,9 @@ export default class Filmstrip extends React.Component<IFilmstripProps, IFilmstr
   public render(): React.ReactElement<IFilmstripProps> {
     return (
       <div className={styles.filmstrip}>
-        <FilmstripLayout>
+        <FilmstripLayout
+            ariaLabel={"Sample filmstrip layout web part, showing sample items., Use right and left arrow keys to navigate between cards in the film strip."}
+        >
           {this.state.items.map((item: any, _index: number) => {
             const previewProps: IDocumentCardPreviewProps = {
               previewImages: [

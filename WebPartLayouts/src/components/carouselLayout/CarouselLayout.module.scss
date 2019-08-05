@@ -1,13 +1,13 @@
-
 @import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+
 :export {
   centerPadding: 50px;
 }
 
-.filmstripLayout {
+.carouselLayout {
   position: relative;
 
-  &.filmStrip {
+  &.carouselStrip {
     margin: 0 -10px;
 
     :global(.slick-slide) {
@@ -65,6 +65,13 @@
   transform: translateY(-50%);
   transition: all 0.3s;
 
+  .currentActiveItem {
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    padding: 16px;
+  }
+
   &:hover {
     color: $ms-color-white;
   }
@@ -86,4 +93,13 @@
 
 .rightPositioned {
   right: 0;
+}
+
+.currentActiveItem {
+  font-size: 17px;
+  font-weight: 300;
+  text-align: center;
+  padding: 16px;
+  text-align: center;
+  color: #333;
 }

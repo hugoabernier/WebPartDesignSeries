@@ -45,7 +45,7 @@ export class FilmstripLayout extends React.Component<
       slidesToShow: 4,
       slidesToScroll: 4,
       speed: 500,
-      centerPadding: "50px",
+      centerPadding: styles.centerPadding,
       pauseOnHover: true,
       variableWidth: false,
       useCSS: true,
@@ -83,8 +83,7 @@ export class FilmstripLayout extends React.Component<
             {this.props.children}
           </Slider>
           <div
-            className={css(styles.indexButtonContainer, styles.sliderButtons)}
-            style={{ left: "10px" }}
+            className={css(styles.indexButtonContainer, styles.sliderButtons, styles.sliderButtonLeft)}
             onClick={() => this._slider.slickPrev()}
           >
             <IconButton
@@ -93,8 +92,7 @@ export class FilmstripLayout extends React.Component<
             />
           </div>
           <div
-            className={css(styles.indexButtonContainer, styles.sliderButtons)}
-            style={{ right: "10px" }}
+            className={css(styles.indexButtonContainer, styles.sliderButtons, styles.sliderButtonRight)}
             onClick={() => this._slider.slickNext()}
           >
             <IconButton
