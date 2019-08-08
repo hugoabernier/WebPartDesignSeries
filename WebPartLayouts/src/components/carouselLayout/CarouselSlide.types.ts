@@ -1,11 +1,10 @@
 export interface ICarouselSlideProps {
-  item: any;
   imageSrc: string;
   title: string;
   location: string;
   height: number;
   width: number;
-  onClick: (item: any) => void;
+  onClick?: () => void;
 }
 
 export interface ICarouselSlideState { }
