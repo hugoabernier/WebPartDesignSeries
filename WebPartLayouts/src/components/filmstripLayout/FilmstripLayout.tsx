@@ -1,7 +1,7 @@
 import { css } from '@uifabric/utilities/lib/css';
 import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import * as React from 'react';
-import * as slick from 'slick-carousel';
+// import * as slick from 'slick-carousel';
 import Slider from 'react-slick';
 import { IFilmstripLayoutProps, IFilmstripLayoutState } from "./FilmstripLayout.types";
 

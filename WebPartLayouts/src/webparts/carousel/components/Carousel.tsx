@@ -1,13 +1,12 @@
 import * as React from 'react';
 import styles from './Carousel.module.scss';
 import { ICarouselProps, ICarouselState } from './ICarousel.types';
-import { escape } from '@microsoft/sp-lodash-subset';
 
 
 import { Image, ImageFit } from 'office-ui-fabric-react/lib/Image';
-import { CarouselLayout } from '../../../components/carouselLayout/CarouselLayout';
+import { CarouselLayout, CarouselSlide } from '../../../components/carouselLayout';
 
-const ASPECT_RATIO: number = 9/16;
+const ASPECT_RATIO: number = 9 / 16;
 export default class Carousel extends React.Component<ICarouselProps, ICarouselState> {
   private _wrapperDiv: HTMLDivElement;
   /**
@@ -71,29 +70,15 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
           ariaLabel={'Use right and left arrow keys to navigate between images in the carousel. Use up and down arrow keys to access the edit and remove buttons for any image.'}
         >
           {this.state.items.map((item: any, _index: number) => {
-            return <div className={styles.itemTileWrapper}>
-              <span role="button" onClick={(_event) => { alert("You clicked an item"); }}>
-                <div className={styles.itemTile} role="link" data-is-draggable="false" data-is-focusable="true" data-selection-invoke="true"
-                  style={{ width: '100%', minHeight: `${this.state.height}px` }}
-                >
-                  <div className={styles.itemTileContent}>
-                    <div className={styles.itemTileFileContainer}>
-                      <div className={styles.itemTileThumbnail}>
-                        <Image src={item.thumbnail} width={this.state.width} height={this.state.height} imageFit={ImageFit.cover} />
-                      </div>
-                      <div className={styles.itemTileNamePlate}>
-                        <div className={styles.itemTileName}>
-                          {item.title}
-                        </div>
-                        <div className={styles.itemTileSubText}>
-                          {item.location}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </span>
-            </div>;
+            return <CarouselSlide
+              item={item}
+              title={item.title}
+              location={item.location}
+              imageSrc={item.thumbnail}
+              width={this.state.width} height={this.state.height}
+              onClick={(_item) => { alert("You clicked an item"); }}
+            />;
+
           })}
         </CarouselLayout>
       </div>
