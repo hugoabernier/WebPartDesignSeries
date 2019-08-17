@@ -42,8 +42,8 @@ export class FilmstripLayout extends React.Component<
       autoplaySpeed: 5000,
       dots: true,
       infinite: isInfinite,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       speed: 500,
       centerPadding: styles.centerPadding,
       pauseOnHover: true,
@@ -53,10 +53,10 @@ export class FilmstripLayout extends React.Component<
       respondTo: "slider",
       responsive: [
         {
-          breakpoint: 964,
+          breakpoint: 625,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3
+            slidesToShow: 1,
+            slidesToScroll: 1
           }
         },
         {
@@ -67,10 +67,10 @@ export class FilmstripLayout extends React.Component<
           }
         },
         {
-          breakpoint: 625,
+          breakpoint: 964,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToShow: 3,
+            slidesToScroll: 3
           }
         }
       ]
