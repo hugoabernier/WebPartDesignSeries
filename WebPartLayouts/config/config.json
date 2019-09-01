@@ -25,12 +25,21 @@
           "manifest": "./src/webparts/carousel/CarouselWebPart.manifest.json"
         }
       ]
+    },
+    "compact-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/compact/CompactWebPart.js",
+          "manifest": "./src/webparts/compact/CompactWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "GridWebPartStrings": "lib/webparts/grid/loc/{locale}.js",
     "FilmstripWebPartStrings": "lib/webparts/filmstrip/loc/{locale}.js",
-    "CarouselWebPartStrings": "lib/webparts/carousel/loc/{locale}.js"
+    "CarouselWebPartStrings": "lib/webparts/carousel/loc/{locale}.js",
+    "CompactWebPartStrings": "lib/webparts/compact/loc/{locale}.js"
   }
 }

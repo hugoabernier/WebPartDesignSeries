@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './Grid.module.scss';
-import { IGridProps, IGridState } from './IGrid.types';
+import { IGridProps, IGridState } from './Grid.types';
 import { ISize } from 'office-ui-fabric-react/lib/Utilities';
 
 // Used to render document cards

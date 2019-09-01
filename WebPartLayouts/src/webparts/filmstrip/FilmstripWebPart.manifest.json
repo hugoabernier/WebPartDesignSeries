@@ -4,22 +4,18 @@
   "alias": "FilmstripWebPart",
   "componentType": "WebPart",
 
-  // The "*" signifies that the version should be taken from the package.json
   "version": "*",
   "manifestVersion": 2,
 
-  // If true, the component can only be installed on sites where Custom Script is allowed.
-  // Components that allow authors to embed arbitrary script code should set this to true.
-  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
   "supportedHosts": ["SharePointWebPart"],
 
   "preconfiguredEntries": [{
-    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
     "group": { "default": "Other" },
     "title": { "default": "Filmstrip" },
     "description": { "default": "Demonstrates how to render a filmstrip web part" },
-    "officeFabricIconFontName": "Page",
+    "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E %3Cpath d='M10,0v28h12V0H10z M20,26h-8V2h8V26z' class='themeableSvgPath'/%3E %3Cpolygon points='0,2 5,2 5,26 0,26 0,28 7,28 7,0 0,0 ' class='themeableSvgPath'/%3E %3Crect width='2' height='2' x='9' y='30' class='themeableSvgPath'/%3E %3Crect width='2' height='2' x='15' y='30' class='themeableSvgPath'/%3E %3Cpolygon points='32,2 32,0 25,0 25,28 32,28 32,26 27,26 27,2 ' class='themeableSvgPath'/%3E %3Crect width='2' height='2' x='21' y='30' class='themeableSvgPath'/%3E %3C/svg%3E",
     "properties": {
       "description": "Filmstrip"
     }

@@ -19,7 +19,7 @@
     "group": { "default": "Other" },
     "title": { "default": "Carousel" },
     "description": { "default": "Demonstrates how to create a web part with the carousel layout" },
-    "officeFabricIconFontName": "Page",
+    "iconImageUrl": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E %3Cg%3E %3Cpath d='M0,4v25h32V4H0z M30,27H2V6h28V27z' class='themeableSvgPath'/%3E %3Cpath d='M0,4v25h32V4H0z M30,27H2V6h28V27z' class='themeableSvgPath'/%3E %3Cpath d='M0,4v25h32V4H0z M30,27H2V6h28V27z' class='themeableSvgPath'/%3E %3C/g%3E %3Cg%3E %3Cpolygon points='8.9,18.2 7,16.2 8.9,14.3 7.9,13.3 4.9,16.2 7.9,19.2' class='themeableSvgPath'/%3E %3Cpolygon points='8.9,18.2 7,16.2 8.9,14.3 7.9,13.3 4.9,16.2 7.9,19.2' class='themeableSvgPath'/%3E %3Cpolygon points='8.9,18.2 7,16.2 8.9,14.3 7.9,13.3 4.9,16.2 7.9,19.2' class='themeableSvgPath'/%3E %3C/g%3E %3Cg%3E %3Cpolygon points='24.5,19.2 27.5,16.2 24.5,13.3 23.4,14.3 25.3,16.2 23.4,18.2' class='themeableSvgPath'/%3E %3Cpolygon points='24.5,19.2 27.5,16.2 24.5,13.3 23.4,14.3 25.3,16.2 23.4,18.2' class='themeableSvgPath'/%3E %3Cpolygon points='24.5,19.2 27.5,16.2 24.5,13.3 23.4,14.3 25.3,16.2 23.4,18.2' class='themeableSvgPath'/%3E %3C/g%3E %3C/svg%3E ",
     "properties": {
       "description": "Carousel"
     }
