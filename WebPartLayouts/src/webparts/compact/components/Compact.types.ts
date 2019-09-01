@@ -4,4 +4,5 @@ export interface ICompactProps {
 
 export interface ICompactState {
   items: any[];
+  currentPage: number;
 }

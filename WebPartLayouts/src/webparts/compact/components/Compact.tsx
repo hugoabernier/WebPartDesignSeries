@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './Compact.module.scss';
 import { ICompactProps, ICompactState } from './Compact.types';
-
+import * as strings from 'CompactWebPartStrings';
 
 // Used to render document cards
 import {
@@ -10,11 +10,11 @@ import {
   DocumentCardDetails,
   DocumentCardTitle,
   IDocumentCardPreviewProps,
-  DocumentCardLocation,
   DocumentCardType
 } from 'office-ui-fabric-react/lib/DocumentCard';
 import { ImageFit } from 'office-ui-fabric-react/lib/Image';
 import CompactLayout from '../../../components/compactLayout/CompactLayout';
+import { Paging } from '../../../components/paging';
 
 export default class Compact extends React.Component<ICompactProps, ICompactState> {
   /**
@@ -25,6 +25,7 @@ export default class Compact extends React.Component<ICompactProps, ICompactStat
 
     // Sample data generated at https://mockaroo.com/
     this.state = {
+      currentPage: 1,
       items: [{
         thumbnail: "https://robohash.org/nostrumquiiure.png?size=48x48&set=set1",
         title: "Aerified"
@@ -93,14 +94,46 @@ export default class Compact extends React.Component<ICompactProps, ICompactStat
   }
 
   public render(): React.ReactElement<ICompactProps> {
+    let pagedItems: any[] = this.state.items;
+    const totalItems: number = pagedItems.length;
+    let showPages: boolean = false;
+    const maxEvents: number = 5;
+    const { currentPage } = this.state;
+
+    if (this.props.usePaging === true && totalItems > 0 && totalItems > maxEvents) {
+      // calculate the page size
+      const pageStartAt: number = maxEvents * (currentPage - 1);
+      const pageEndAt: number = (maxEvents * currentPage);
+
+      pagedItems = pagedItems.slice(pageStartAt, pageEndAt);
+      showPages = true;
+    }
+
     return (
       <div className={styles.compact}>
         <CompactLayout
-          items={this.state.items}
-          onRenderGridItem={(item: any, index: number) => this._onRenderGridItem(item, index)}
-        />
+          items={pagedItems}
+          onRenderGridItem={(item: any, index: number) => this._onRenderGridItem(item, index)} />
+
+        {showPages &&
+          <Paging
+            showPageNumber={true}
+            currentPage={currentPage}
+            itemsCountPerPage={maxEvents}
+            totalItems={totalItems}
+            onPageUpdate={this._onPageUpdate}
+            nextButtonLabel={strings.NextLabel}
+            previousButtonLabel={strings.PreviousLabel}
+          />
+        }
       </div>
     );
+  }
+
+  private _onPageUpdate = (pageNumber: number): void => {
+    this.setState({
+      currentPage: pageNumber
+    });
   }
 
   private _onRenderGridItem = (item: any, _index: number): JSX.Element => {

@@ -1,4 +1,6 @@
 declare interface ICompactWebPartStrings {
+  PreviousLabel: string;
+  NextLabel: string;
   PropertyPaneDescription: string;
   BasicGroupName: string;
   UsePagingFieldLabel: string;

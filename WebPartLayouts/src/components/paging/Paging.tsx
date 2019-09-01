@@ -18,7 +18,7 @@ export class Paging extends React.Component<IPagingProps, IPagingState> {
         const numberOfPages: number = this._getNumberOfPages();
 
         // we disable the previous button if we're on page 1
-        const prevDisabled: boolean = currentPage < 1;
+        const prevDisabled: boolean = currentPage < 2;
 
         // we disable the next button if we're on the last page
         const nextDisabled: boolean = currentPage >= numberOfPages;
