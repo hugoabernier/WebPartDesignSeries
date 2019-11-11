@@ -17,7 +17,12 @@
   }
 
   .sliderButtons {
-    opacity: 0;
+    //Increased starting opacity so you see light buttons and know you can slide
+    opacity: 0.3;
+    //Added transition to ease up opacity
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    transition:all 0.7s ease;
   }
 
   .sliderButtonRight {
@@ -30,11 +35,19 @@
 
   &:hover .sliderButtons {
     opacity: 1;
+    //Added transition to ease down opacity
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    transition:all 0.7s ease;
 
     &:hover {
       color: $ms-color-white;
     }
   }
+}
+
+.customDots li button:before{
+  font-size: 12px !important;
 }
 
 .indexButtonContainer {
@@ -47,16 +60,16 @@
 .indexButton {
   font-size: 17px;
   font-weight: 300;
-  height: 40px;
+  height: 80px; //was 40px
   padding: 0;
   border: 0;
   background: 0 0;
   cursor: pointer;
   color: $ms-color-white;
-  width: 40px;
+  width: 60px; //was 40px
   min-width: 20px;
   margin-left: 0;
-  line-height: 40px;
+  line-height: 80px; //was 40px
   box-sizing: content-box;
   background-color: $ms-color-black;
   opacity: 0.6;
@@ -70,6 +83,7 @@
     font-weight: 300;
     text-align: center;
     padding: 16px;
+
   }
 
   &:hover {
@@ -100,6 +114,7 @@
   font-weight: 300;
   text-align: center;
   padding: 16px;
+  padding-top: 24px !important; // Added more spacing between the dots and pageing.
   text-align: center;
   color: #333;
 }

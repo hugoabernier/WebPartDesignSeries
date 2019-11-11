@@ -63,7 +63,8 @@ export class CarouselLayout extends React.Component<
       autoplaySpeed: 0,
       centerMode: false,
       centerPadding: styles.centerPadding,
-      dots: false,
+      dots: true,    //was false
+      dotsClass: [styles.customDots,"slick-dots"].join(" "),
       cssEase: "ease",
       draggable: false,
       easing: "linear",
@@ -132,6 +133,14 @@ export class CarouselLayout extends React.Component<
             <IconButton
               className={css(styles.indexButton, styles.leftPositioned)}
               iconProps={{ iconName: "ChevronLeft" }}
+              //Added custom styles to make chevrons larger
+              styles={{
+                icon: { 
+                  fontSize: 32,
+                  fontWeight: "bolder",
+                  margin: '0px 2px',
+                },
+              }}
             />
           </div>
           <div
@@ -141,6 +150,14 @@ export class CarouselLayout extends React.Component<
             <IconButton
               className={css(styles.indexButton, styles.rightPositioned)}
               iconProps={{ iconName: "ChevronRight" }}
+              //Added custom styles to make chevrons larger
+              styles={{
+                icon: { 
+                  fontSize: 32,
+                  fontWeight: "bolder",
+                  margin: '0px 2px',
+                },
+              }}
             />
           </div>
           {this.props.pagingTemplate &&
