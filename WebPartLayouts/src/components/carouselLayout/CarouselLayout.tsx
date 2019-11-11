@@ -63,7 +63,8 @@ export class CarouselLayout extends React.Component<
       autoplaySpeed: 0,
       centerMode: false,
       centerPadding: styles.centerPadding,
-      dots: false,
+      dots: true,    //was false
+      dotsClass: [styles.customDots,"slick-dots"].join(" "),
       cssEase: "ease",
       draggable: false,
       easing: "linear",
