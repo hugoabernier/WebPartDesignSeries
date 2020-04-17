@@ -1,0 +1,6 @@
+interface ComponentSize {
+  width: number,
+  height: number,
+}
+
+declare export default function useComponentSize<T>(ref: React.Ref<T>): ComponentSize;
